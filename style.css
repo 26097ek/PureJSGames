@@ -1,0 +1,22 @@
+#windowsizealertmessageheader{
+    display: none;
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+}
+
+#game{
+    margin: auto;
+    border: 3px solid #000;
+    width: 1280px;
+    height: 720px;
+}
+
+#player {
+    position: relative;
+    top: 640px;
+    width: 40px;
+    height: 40px;
+    background-image: url(assets/player.png);
+    rotate: 2deg;
+}
