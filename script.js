@@ -20,9 +20,12 @@ const mousepos = {x:0,y:0}
 
 window.addEventListener("resize", ()=>{
     if (window.innerWidth<1306 || window.innerHeight<736) {
-        document.querySelector("#windowsizealertmessageheader").textContent = `Your browser viewport must be at least 736 pixels tall and 1306 pixels wide to be able to play this game. Current viewport size: ${window.innerWidth}, ${window.innerHeight}`
+        document.querySelector("#windowsizealertmessageheadercentered").textContent = `Your browser viewport must be at least 736 pixels tall and 1306 pixels wide to be able to play this game. Current viewport size: ${window.innerWidth}, ${window.innerHeight}`
         gameScreen.style.visibility = "hidden"
-        document.querySelector("#windowsizealertmessageheader").style.display = "block"
+        document.querySelector("#windowsizealertmessageheadercentered").style.display = "block"
+    } else {
+        gameScreen.style.visibility = "visible"
+        document.querySelector("#windowsizealertmessageheadercentered").style.display = "none"
     }
 })
 
@@ -33,5 +36,5 @@ gameScreen.addEventListener("mousemove", (e)=>{
 
 if (window.innerWidth<1306 || window.innerHeight<736) {
     gameScreen.style.visibility = "hidden"
-    document.querySelector("#windowsizealertmessageheader").style.display = "block"
+    document.querySelector("#windowsizealertmessageheadercentered").style.display = "block"
 }
